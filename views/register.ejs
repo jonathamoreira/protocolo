@@ -1,0 +1,29 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<div class="container  mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Register</h2>
+            <div class="card-body">
+                <form action="/register" method="post">
+                    <div>
+                        <label for="name">Nome</label>
+                        <input type="text" name="name"required class="form-control">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" required class="form-control">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" required class="form-control mt-2">
+                    </div>
+                    <button type="submit" class="btn btn-success mt-2 form-control">Register</button>
+                </form>
+                <a href="/login" class="btn btn-secondary mt-2 form-control">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>

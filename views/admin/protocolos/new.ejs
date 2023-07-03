@@ -1,0 +1,22 @@
+<%- include('../../partials/header.ejs') %>
+<body>
+    <%- include('../../partials/navbar.ejs') %>
+
+    <div class="container mt-3">
+        <h2>Protocolo De Ocorrência</h2>
+        <div class="card mt-2">
+            <div class="card-body">
+                <form action="/protocolos/save" method="post">
+                    <input type="text" placeholder="Digite o nome do Requerente" name="nome" required class="form-control mt-2">
+                    <input type="number" name="telefone" placeholder="Telefone" id="" class="form-control mt-2 mb-2">
+                    <input type="text" placeholder="Endereço" name="endereco" class="form-control mt-2">
+                    <input type="text" placeholder="veículos envolvidos" name="veiculos" class="form-control mt-2" style="text-transform: uppercase;">
+                    <textarea name="observ" class="form-control mt-3" placeholder="observações"></textarea>
+                      <hr>
+                    <input type="submit" class="btn btn-success mt-3" value="Registrar">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('../../partials/footer.ejs') %>
